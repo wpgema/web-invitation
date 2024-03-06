@@ -1,5 +1,6 @@
 const main = document.getElementById('main');
 const tombol = document.getElementById('a');
+const play = document.getElementById("play");
 
 main.classList.add('display');
 
@@ -9,6 +10,19 @@ tombol.addEventListener("click", function(){
     song.src = "assets/js/audio.mp3";
     song.loop = true;
     song.play();
+
+    play.addEventListener("click", function(){
+        if(song.paused){
+            song.play();
+            play.classList.remove('bi-volume-mute-fill')
+            play.classList.add('bi-music-note-list pink');
+            
+        } else {
+            song.pause();
+            play.classList.add('bi-volume-mute-fill');
+            play.classList.remove('bi-music-note-list pink');
+        }
+    })
 })
 
 window.addEventListener("scroll", reveal);

@@ -278,6 +278,12 @@ nav  span .navbar-toggler-icon, nav span{
     color: var(--white);
 }
 
+.audio .row .col-6{
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+}
+
 .footer{
     background-color: var(--pink);
 }
